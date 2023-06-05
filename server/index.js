@@ -19,7 +19,7 @@ app.get("/allHerbs", async(req, res) => {
 
 //search for specific herb or disease
 
-app.get("/herbs", async(req, res) => {
+app.get("/herb", async(req, res) => {
     try {
         const { value } = req.query;
 

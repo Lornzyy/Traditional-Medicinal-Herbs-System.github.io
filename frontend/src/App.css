@@ -13,10 +13,18 @@ body {
 .header {
   background-color: #4e6498;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   color: rgb(184, 137, 137);
+}
+.header--intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -25,15 +33,53 @@ body {
   margin: 10px;    
 }
 .nav--header {
-  font-size: 25px;
+  font-size: 1.8rem;
   margin: 0 20px;
+  
+}
+.nav--header a{
+  list-style: none;
+  color:rgb(184, 137, 137);
+  text-decoration: none;
   cursor: pointer;
 }
 
 .additions{
-  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.additions--ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  list-style: none;
+
 }
 
+.additions--li {
+  text-align: center;
+  margin: 10px;
+
+}
+
+.additions--li a {
+  list-style: none;
+  color:rgb(184, 137, 137);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.additions--li a:hover {
+  background-color: #a8a0a0;
+  border-radius: 20px;
+  padding: 4px;
+}
 .search-bar, .signupBtn {
   height: 30px;
   border-radius: 20px;
@@ -55,7 +101,7 @@ body {
 }
 
 .signupBtn {
-  width: 100px;
+  width: 120px;
   color: rgb(184, 137, 137);
   background: white;
   outline: none;
@@ -65,8 +111,31 @@ body {
 }
 
 .signupBtn:hover{
-  font-size: 18px;
+  border: 2px dotted rgb(184, 137, 137);
 }
+
+.signupBtn a {
+  color: rgb(184, 137, 137);
+  background: white;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+/** home page*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 10px auto;
+  border-radius: 20px;
+
+}
+
+.slide-container {
+  border-radius: 20px;
+  height: 100%;
+}
+
 
 /** herb card */
 
@@ -76,17 +145,19 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
 }
 .herb {
-  max-width: 18rem;
+  max-width: 16rem;
   color: white;
   padding: 10px;
   margin: 10px 20px;
   border-radius: 20px;
   border: 2px solid #4e6498;
 }
+.herb:hover {
+  border: solid red;
 
+}
 .herb--card {
   margin: 0;
   padding: 0;
@@ -96,9 +167,14 @@ body {
 .herb--img{
   height: 10.5rem;
   width: 100%;
-  min-width: 15rem;
+  min-width: 14rem;
   border-radius: 20px;
   border: solid pink;
+}
+
+.herb--img:hover {
+  border: solid red;
+
 }
 
 .herb--name {
