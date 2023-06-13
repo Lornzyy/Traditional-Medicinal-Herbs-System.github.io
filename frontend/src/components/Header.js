@@ -1,22 +1,8 @@
 import React from "react"
-import { Link} from "react-router-dom"
+import { Link} from "react-router-dom";
 
 export default function Header(){
 
-    const [searchValue, setSearchValue] = React.useState("");
-    const [returnHerb, setReturnHerb] = React.useState([]);
-
-    const onSubmitForm = async e => {
-        e.preventDefault();
-        try {
-            const response = await fetch(`http://localhost:5000/herb/?value=${searchValue}`);
-
-            const parseResponse = await response.json();
-            setReturnHerb(parseResponse);
-        } catch (err) {
-            console.error(err.message);
-        }
-    }
 
     return (
             <div className="header">
@@ -30,11 +16,13 @@ export default function Header(){
                     <li className="additions--li"><Link to="/medicine">Medicine</Link></li>
                     <li className="additions--li"><Link to="/contact">Contact</Link></li>
                     </ul>
-                    <form onSubmit={onSubmitForm}>
-                        <input type="search" placeholder="Search Herb/Disease..." className="search-bar" value={searchValue}
-                            onChange={e =>{setSearchValue(e.target.value)}}
-                        />
-                    </form>
+
+                    
+                    <Link to="/searchResults">
+                        <button type="submit" className="signupBtn">Search...</button>
+                    </Link>
+                    
+                 
                     <button className="signupBtn"><Link to="/signup">SIGN UP</Link></button>
                 </div>
             </div>

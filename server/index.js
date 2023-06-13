@@ -36,32 +36,31 @@ app.get("/herb", async(req, res) => {
     }
 });
 
-//Add users to the dbusers
-app.post("/users", async(req, res) => {
+//Add comments to the userComments table
+app.post("/comments", async(req, res) => {
     try {
-        const { username, email, password } = req.body;
-        const newUser = await pool.query(
+        const { username, comment } = req.body;
+        const newComment = await pool.query(
             `
-            INSERT INTO dbusers(username, email, password)
-            VALUES($1, $2, $3)
+            INSERT INTO userComments(username, comment)
+            VALUES($1, $2)
             `
-            ,[username, email, password]
+            ,[username, comment]
         );
-        res.json(newUser)
+        res.json(newComment)
     } catch (err) {
         console.error(err.message);
     }
 });
-
-//Retrieve all users from the dbusers
-app.get("/users", async(req, res) => {
+app.get("/comments", async(req, res) => {
     try {
-
-        const allUsers = await pool.query(
-            " SELECT * FROM dbusers "
+        const { username, comment } = req.body;
+        const newComment = await pool.query(
+            `
+           SELECT * FROM userComments
+            `
         );
-
-        res.json(allUsers.rows);
+        res.json(newComment)
     } catch (err) {
         console.error(err.message);
     }

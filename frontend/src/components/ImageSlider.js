@@ -1,6 +1,6 @@
 import React from "react"
 import "react-slideshow-image/dist/styles.css"
-import { Fade, Zoom, Slide } from "react-slideshow-image"
+import { Fade} from "react-slideshow-image"
 
 function ImageSlider(){
 
@@ -34,17 +34,15 @@ function ImageSlider(){
 
     const spanStyle ={
         color: "white",
-        background: "black",
         fontSize: "40px",
         fontWeight: "600",
         transform: "translate(0, 250%)",
-        background: "transparent",
         textAlign: "center"
     }
 
     return (
         <div className="slide-container">
-            <Slide>
+            <Fade>
                 {slideImages.map((image, index) =>(
                     <div key={index}>
                         <div style={{...divStyle, backgroundImage:`url(${image.url})`}}>
@@ -53,7 +51,7 @@ function ImageSlider(){
                         </div>
                     </div>
                 ))}
-            </Slide>
+            </Fade>
         </div>
     )
 
