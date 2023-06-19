@@ -1,9 +1,19 @@
-import React from "react"
+import React from "react";
 import { Link} from "react-router-dom";
+import { UserAuth } from "../context/authContext";
+
 
 export default function Header(){
 
+    const {user, logOut} = UserAuth();
 
+    const handleLogOut=async() =>{
+        try {
+            await logOut();
+        } catch (err) {
+            console.log(err);
+        }
+    }
     return (
             <div className="header">
                 <div className="header--intro">
@@ -22,8 +32,11 @@ export default function Header(){
                         <button type="submit" className="signupBtn">Search...</button>
                     </Link>
                     
-                 
-                    <button className="signupBtn"><Link to="/signup">SIGN UP</Link></button>
+                    {user?.displayName ? (
+                    <button className="signupBtn" onClick={handleLogOut}>LOG OUT</button> )
+                    : (<button className="signupBtn"><Link to="/login">LOG IN </Link></button>)
+                    }
+                    
                 </div>
             </div>
 
