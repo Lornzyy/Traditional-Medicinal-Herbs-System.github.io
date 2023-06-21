@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "../components/ImageSlider";
+import Footer from "../components/Footer";
 
 
 function Home(){
@@ -22,10 +23,11 @@ function Home(){
             </p>
             <div className="m-auto">
             <ImageSlider/>
-            <button className="signupBtn mx-auto"> <a href="/signup">CHECK IT OUT</a></button>
-
-            
+            <button className="signupBtn mx-auto get-started"> <a href="/signup">CHECK IT OUT</a></button>
             </div>
+
+            <Footer/>
+
         </div>
 
     )

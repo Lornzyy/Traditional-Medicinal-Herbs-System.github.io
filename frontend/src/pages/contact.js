@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import  {
+    faTwitter,
+    faGithub
+} from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+import { faInbox } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
 
@@ -11,7 +17,7 @@ const Contact = () => {
         e.preventDefault();
             try {
                 const body = { username, comment };
-                const response = await fetch("http://localhost:5000/comments", {
+                await fetch("http://localhost:5000/comments", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(body)
@@ -20,8 +26,14 @@ const Contact = () => {
             } catch (err) {
                 console.error(err.message);
             }
+    }
 
-    
+    function handleClick(){
+        if (comment && username !== null){
+            alert("Thank you for your comment")
+        } else {
+            alert("Try again")
+        }
     }
     return (
         <>
@@ -45,8 +57,29 @@ const Contact = () => {
                 value={comment}
                 onChange={e => setComment(e.target.value)}
                 />
-                <button className="signupBtn">Comment</button>
+                <button className="signupBtn" onClick={handleClick}>Comment</button>
             </form>
+
+            <h4 className="mb-3 text-center font-italic text-white">
+                You can contact me through the following social media
+            </h4>
+            <div className="social-icons">
+            <span>
+                <Link to="https://twitter.com/Lornzyy" target="_blank">
+                    <FontAwesomeIcon icon={faTwitter} className="social-icon"/>Twitter
+                </Link>
+            </span>
+            <span>
+                <Link to="https://github.com/Lornzyy" target="_blank">
+                    <FontAwesomeIcon icon={faGithub} className="social-icon" />Github
+                </Link>
+            </span>
+            <span>
+                <Link to="https://lonzmungai@gmail.com" target="_blank">
+                    <FontAwesomeIcon icon={faInbox} className="social-icon" />Email
+                </Link>
+            </span>
+        </div>
 
         </>
     )

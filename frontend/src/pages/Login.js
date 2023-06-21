@@ -18,17 +18,21 @@ const  Login = () =>{
 
     useEffect(() => {
         if (user != null){
-            navigate('/medicine');
+            navigate('/login');
+            
         }
     }, [user]);
 
     return (
        <>
-            <h1 className="m-3 text-center text-white text-capitalize">
-                Log in to view the traditional medicinal Herbs
-            </h1>
-            <p>Welcome, {user?.displayName}</p>
-           <GoogleButton className="googleBtn" onClick={handleGoogleSignIn}/>
+            {
+               user != null ?<h1 className="m-3 text-center text-white text-capitalize">
+                Welcome, {user?.displayName}</h1> :<h1 className="m-3 text-center text-white text-capitalize">
+                Log in to view the traditional medicinal Herbs</h1>
+            }
+            {
+            user == null ? <GoogleButton className="googleBtn" onClick={handleGoogleSignIn}/>: <p></p>
+            } 
        </>
     )
 }

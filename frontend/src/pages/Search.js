@@ -1,6 +1,6 @@
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSearch} from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Search(){
 
@@ -14,6 +14,8 @@ function Search(){
 
             const parseResponse = await response.json();
             setReturnHerb(parseResponse);
+            
+            
 
         } catch (err) {
             console.error(err.message);
@@ -21,28 +23,26 @@ function Search(){
     }
     return (
         <>
-            <form onSubmit={onSubmitForm} className="form-control">
+           <form className="form-control" onSubmit={onSubmitForm}>
                 <input type="search" placeholder="Search Herb/Disease....." className="search-bar" value={searchValue}
-                onChange={e =>{setSearchValue(e.target.value)}}/>
-            <FontAwesomeIcon icon={faSearch} onClick={onSubmitForm}/>
-
+                    onChange={e =>{setSearchValue(e.target.value)}}/>
+                <FontAwesomeIcon icon={faSearch} onClick={onSubmitForm}/>
             </form>
-            <div className="main">
-            {returnHerb.map(herb => (
-                        <div className="herb" key={herb.id}>
-                            <div className="herb--card">
-                                <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
-                                <h3 className="herb--name">{ herb.kikuyuname }</h3>
-                                <p className="herb--part"><em>Part used is the</em> {herb.part}</p>
-                                <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>
-                                <p className="herb--instruction"><em>Administer: </em>{herb.administermethod}</p>
-                                <p className="herb--disease"><em>Disease:</em> {herb.disease}</p>
-                            </div>
-                        </div>
-                    ))}
-
             
-            </div>
+                <div className="main">
+                {returnHerb.map(herb => (
+                            <div className="herb" key={herb.id}>
+                                <div className="herb--card">
+                                    <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
+                                    <h3 className="herb--name">{ herb.kikuyuname }</h3>
+                                    <p className="herb--part"><em>Part used is the</em> {herb.part}</p>
+                                    <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>
+                                    <p className="herb--instruction"><em>Administer: </em>{herb.administermethod}</p>
+                                    <p className="herb--disease"><em>Disease:</em> {herb.disease}</p>
+                                </div>
+                            </div>
+                        ))}
+                </div>
         </>
     )
 }
