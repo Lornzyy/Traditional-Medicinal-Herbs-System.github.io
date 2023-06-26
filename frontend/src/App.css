@@ -34,9 +34,9 @@ body {
   border-radius: 50%;
   margin: 10px;    
 }
+
 .nav--header {
   font-size: 1.8rem;
-  margin: 0 20px;
   
 }
 .nav--header a{
@@ -357,8 +357,6 @@ textarea:focus {
 }
 
 
-/** small screen */
-
 .toggleBtn, .close-btn {
   visibility: hidden;
   opacity: 0;
@@ -373,7 +371,9 @@ textarea:focus {
 .homeBtn {
   visibility: hidden;
 }
-@media only screen and (max-width: 1024px){
+
+/** small screen */
+@media only screen and (max-width: 768px){
 
   .App {
     overflow: visible;
@@ -383,8 +383,6 @@ textarea:focus {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     padding: 2px;
   }
 
