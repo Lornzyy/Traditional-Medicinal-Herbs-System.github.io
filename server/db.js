@@ -1,7 +1,12 @@
 const { Pool } = require("pg");
 
 const pool = new Pool ({
-    connectionString: process.env.POSTGRES_URL + "?sslmode=require",
+    "user": "lorna",
+    "password": "root",
+    "host": "localhost",
+    "port": 5432,
+    "database": "herbs"
+
 });
 
 module.exports = pool;

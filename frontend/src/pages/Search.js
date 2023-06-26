@@ -30,18 +30,21 @@ function Search(){
             </form>
             
                 <div className="main">
-                {returnHerb.map(herb => (
-                            <div className="herb" key={herb.id}>
-                                <div className="herb--card">
-                                    <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
-                                    <h3 className="herb--name">{ herb.kikuyuname }</h3>
-                                    <p className="herb--part"><em>Part used is the</em> {herb.part}</p>
-                                    <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>
-                                    <p className="herb--instruction"><em>Administer: </em>{herb.administermethod}</p>
-                                    <p className="herb--disease"><em>Disease:</em> {herb.disease}</p>
-                                </div>
-                            </div>
-                        ))}
+
+                        {returnHerb.map(herb => (
+                                    <div className="herb" key={herb.id}>
+                                        <div className="herb--card">
+                                            <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
+                                            <h3 className="herb--name">{ herb.kikuyuname }</h3>
+                                            <p className="herb--part"><em>Part used is the</em> {herb.part}</p>
+                                            <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>
+                                            <p className="herb--instruction"><em>Administer: </em>{herb.administermethod}</p>
+                                            <p className="herb--disease"><em>Disease:</em> {herb.disease}</p>
+                                        </div>
+                                    </div>
+
+                                ))}
+                    
                 </div>
         </>
     )

@@ -7,7 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 //list all herbs
-app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/allHerbs", async(req, res) => {
+
+
+
+app.get("/allHerbs", async(req, res) => {
     try {
         const allHerbs = await pool.query("SELECT * FROM medicinalherbs")
         res.json(allHerbs.rows);
@@ -18,7 +21,7 @@ app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/allHerb
 
 //search for specific herb or disease
 
-app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/herb", async(req, res) => {
+app.get("/herb", async(req, res) => {
     try {
         const { value } = req.query;
 
@@ -36,7 +39,7 @@ app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/herb", 
 });
 
 //Add comments to the userComments table
-app.post("https://traditional-medicinal-herbs-system-github-io.vercel.app/comments", async(req, res) => {
+app.post("/comments", async(req, res) => {
     try {
         const { username, comment } = req.body;
         const newComment = await pool.query(
@@ -54,10 +57,9 @@ app.post("https://traditional-medicinal-herbs-system-github-io.vercel.app/commen
 
 
 
+const PORT = process.env.PORT || 5000;
 
 
-
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server has started on port 5000`)
-})
+app.listen(PORT, () => {
+    console.log(`Server has started on port ${PORT}, http://localhost:5000}`)
+});
