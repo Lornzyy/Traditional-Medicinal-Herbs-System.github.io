@@ -8,7 +8,7 @@ app.use(express.json());
 
 //list all herbs
 
-app.get("/", (req, res) => res.send('Home Page Route'));
+app.get("home", (req, res) => res.send('Home Page Route'));
 
 
 app.get("/allHerbs", async(req, res) => {
@@ -61,6 +61,6 @@ app.post("/comments", async(req, res) => {
 const PORT = process.env.PORT || 5000;
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server has started on port ${PORT}, http://localhost:5000}`)
 });
