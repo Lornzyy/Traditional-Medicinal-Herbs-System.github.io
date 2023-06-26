@@ -1,14 +1,16 @@
+import { sql } from '@vercel/postgres';
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+var http=require('http');
 
 app.use(cors());
 app.use(express.json());
 
 //list all herbs
 
-app.get("home", (req, res) => res.send('Home Page Route'));
+app.get("/home", (req, res) => res.send('Home Page Route'));
 
 
 app.get("/allHerbs", async(req, res) => {
@@ -58,9 +60,9 @@ app.post("/comments", async(req, res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server has started on port ${PORT}, http://localhost:5000}`)
+app.listen(port, () => {
+    console.log(`Server has started on port ${port}`)
 });
