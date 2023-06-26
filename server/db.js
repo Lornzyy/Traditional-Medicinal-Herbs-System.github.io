@@ -7,7 +7,7 @@ const pool = new Pool ({
 module.exports = pool;
 
 /**
- *      "user": "lorna",
+ *  "user": "lorna",
     "password": "root",
     "host": "localhost",
     "port": 5432,

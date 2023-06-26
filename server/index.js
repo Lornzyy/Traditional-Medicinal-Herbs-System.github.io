@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 //list all herbs
-app.get("/allHerbs", async(req, res) => {
+app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/allHerbs", async(req, res) => {
     try {
         const allHerbs = await pool.query("SELECT * FROM medicinalherbs")
         res.json(allHerbs.rows);
@@ -18,7 +18,7 @@ app.get("/allHerbs", async(req, res) => {
 
 //search for specific herb or disease
 
-app.get("/herb", async(req, res) => {
+app.get("https://traditional-medicinal-herbs-system-github-io.vercel.app/herb", async(req, res) => {
     try {
         const { value } = req.query;
 
@@ -36,7 +36,7 @@ app.get("/herb", async(req, res) => {
 });
 
 //Add comments to the userComments table
-app.post("/comments", async(req, res) => {
+app.post("https://traditional-medicinal-herbs-system-github-io.vercel.app/comments", async(req, res) => {
     try {
         const { username, comment } = req.body;
         const newComment = await pool.query(
