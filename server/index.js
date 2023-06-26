@@ -8,6 +8,7 @@ app.use(express.json());
 
 //list all herbs
 
+app.get("/", (req, res) => res.send('Home Page Route'));
 
 
 app.get("/allHerbs", async(req, res) => {

@@ -126,10 +126,12 @@ body {
 }
 
 .contact-form input {
+  min-width: 50%;
   border-radius: 10px;
   text-indent: 10px;
   padding: 10px;
   border: none;
+  justify-content: center;
 }
 
 .contact-form input:hover {
@@ -147,6 +149,7 @@ body {
 }
 
 textarea {
+  min-width: 50%;
   border-radius: 10px;
   height: 100px;
   padding: 10px;
