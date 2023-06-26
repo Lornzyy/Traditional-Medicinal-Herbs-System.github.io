@@ -37,6 +37,7 @@ body {
 
 .nav--header {
   font-size: 1.8rem;
+  margin: 0 20px;
   
 }
 .nav--header a{
@@ -113,7 +114,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 70%;
+  max-width: 450px;
   margin: 20px auto;
   background: transparent;
   border-radius: 20px;
@@ -126,7 +127,7 @@ body {
 }
 
 .contact-form input {
-  min-width: 50%;
+  width: 90%;
   border-radius: 10px;
   text-indent: 10px;
   padding: 10px;
@@ -149,7 +150,7 @@ body {
 }
 
 textarea {
-  min-width: 50%;
+  width: 90%;
   border-radius: 10px;
   height: 100px;
   padding: 10px;
@@ -414,7 +415,9 @@ textarea:focus {
   .additions--ul {
     display: flex;
     flex-direction: column;
-    margin-bottom: -20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   .header .responsive_nav {
@@ -425,6 +428,8 @@ textarea:focus {
   .nav--header {
     width: 250px;
     text-align: center;
+    margin-top: -.2rem;
+    margin-left: -.5rem;
   }
 
   .toggleBtn, .close-btn {
