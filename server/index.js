@@ -1,4 +1,3 @@
-import { sql } from '@vercel/postgres';
 const express = require("express");
 const app = express();
 const cors = require("cors");
