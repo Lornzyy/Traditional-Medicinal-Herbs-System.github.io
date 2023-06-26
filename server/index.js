@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
 const cors = require("cors");
 const pool = require("./db");
 
@@ -52,19 +51,6 @@ app.post("/comments", async(req, res) => {
         console.error(err.message);
     }
 });
-app.get("/comments", async(req, res) => {
-    try {
-        const { username, comment } = req.body;
-        const newComment = await pool.query(
-            `
-           SELECT * FROM userComments
-            `
-        );
-        res.json(newComment)
-    } catch (err) {
-        console.error(err.message);
-    }
-});
 
 
 
@@ -72,7 +58,6 @@ app.get("/comments", async(req, res) => {
 
 
 
-
-app.listen(PORT, () => {
-    console.log(`Server has started on port ${PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server has started on port 5000`)
 })

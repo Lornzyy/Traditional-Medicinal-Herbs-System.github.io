@@ -19,6 +19,7 @@ export default function Header(){
 
     const toggleBtn= () => {
         navRef.current.classList.toggle("responsive_nav");
+
     }
     return (
             <div className="header">
@@ -35,20 +36,21 @@ export default function Header(){
                 />
                 <nav className="additions" ref={navRef}>
                     <ul className="additions--ul">
-                    <li className="additions--li"><Link to="/medicine">Medicine</Link></li>
-                    <li className="additions--li"><Link to="/contact">Contact</Link></li>
+                    <li className="additions--li homeBtn"><Link to="/" onClick={toggleBtn}>Home</Link></li>
+                    <li className="additions--li"><Link to="/medicine" onClick={toggleBtn}>Medicine</Link></li>
+                    <li className="additions--li"><Link to="/contact" onClick={toggleBtn}>Contact</Link></li>
                     </ul>
-                    <Link to="/searchResults"><button className="signupBtn">Search</button></Link>
+                    <Link to="/searchResults" onClick={toggleBtn}><button className="signupBtn">Search</button></Link>
                     
                     {user?.displayName ? (
                     <button className="signupBtn" onClick={handleLogOut}>LOG OUT</button> )
-                    : (<Link to="/login"><button className="signupBtn">LOG IN </button></Link>)
+                    : (<Link to="/login" onClick={toggleBtn}><button className="signupBtn">LOG IN </button></Link>)
                     }
-                <FontAwesomeIcon
-                    className="close-btn"
-                    onClick={toggleBtn}
-                    icon={faTimes}
-                />
+                    <FontAwesomeIcon
+                        className="close-btn"
+                        onClick={toggleBtn}
+                        icon={faTimes}
+                    />
                 </nav>   
                 </div>
             </div>

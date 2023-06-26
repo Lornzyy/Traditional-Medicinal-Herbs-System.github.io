@@ -21,9 +21,10 @@ function Home(){
                 a first for them and ease their usage for them.
 
             </p>
-            <div className="m-auto">
+            
             <ImageSlider/>
-            <button className="signupBtn mx-auto get-started"> <a href="/signup">CHECK IT OUT</a></button>
+            <div className="imgBtn">
+            <button className="startBtn"><a href="/login">GET STARTED</a></button>
             </div>
 
             <Footer/>

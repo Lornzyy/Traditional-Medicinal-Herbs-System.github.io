@@ -9,6 +9,7 @@ import Contact from "./pages/contact";
 import Medicine from "./pages/medicine";
 import SignIn from "./pages/Login";
 import Search from "./pages/Search";
+import Protected from "./components/Protected";
 
 function App() {
   return (
@@ -18,10 +19,22 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/medicine" element={<Medicine/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/medicine" 
+            element={
+              <Protected>
+                <Medicine/>
+              </Protected>
+          }
+          />
+          <Route path="/searchResults" 
+            element={
+              <Protected>
+                <Search/>
+              </Protected>
+            }
+          />
           <Route path="/login" element={<SignIn/>}/>
-          <Route path="/searchResults" element={<Search/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
         </div>
 
