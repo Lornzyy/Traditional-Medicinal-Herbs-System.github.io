@@ -12,13 +12,13 @@ const  Login = () =>{
         try {
             await googleSignIn();
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
     };
 
     useEffect(() => {
         if (user != null){
-            navigate('/login');
+            navigate('/medicine');
             
         }
     }, [user]);

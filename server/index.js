@@ -9,9 +9,6 @@ app.use(express.json());
 
 //list all herbs
 
-app.get("/home", (req, res) => res.send('Home Page Route'));
-
-
 app.get("/allHerbs", async(req, res) => {
     try {
         const allHerbs = await pool.query("SELECT * FROM medicinalherbs")
@@ -59,7 +56,7 @@ app.post("/comments", async(req, res) => {
 
 
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 
 
 app.listen(port, () => {

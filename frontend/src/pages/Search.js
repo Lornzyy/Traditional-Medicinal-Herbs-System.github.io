@@ -14,9 +14,6 @@ function Search(){
 
             const parseResponse = await response.json();
             setReturnHerb(parseResponse);
-            
-            
-
         } catch (err) {
             console.error(err.message);
         }
@@ -28,9 +25,12 @@ function Search(){
                     onChange={e =>{setSearchValue(e.target.value)}}/>
                 <FontAwesomeIcon icon={faSearch} onClick={onSubmitForm}/>
             </form>
-            
-                <div className="main">
 
+            {returnHerb.length < 1 ? (
+                <h1 className="text-center text-white mb-5 mt-5">No Herb/Disease found</h1>)
+                : (
+                <div className="main">
+                    
                         {returnHerb.map(herb => (
                                     <div className="herb" key={herb.id}>
                                         <div className="herb--card">
@@ -46,6 +46,7 @@ function Search(){
                                 ))}
                     
                 </div>
+            )}
         </>
     )
 }
