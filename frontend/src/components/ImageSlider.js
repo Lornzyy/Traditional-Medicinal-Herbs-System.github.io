@@ -27,9 +27,11 @@ function ImageSlider(){
         alignItems: "center",
         justifyContent: "center",
         height: "380px",
+        maxWidth: "85%",
         backgroundSize: "cover",
         borderRadius: "20px",
-        backgroundPosition: "center"
+        backgroundPosition: "center",
+        margin: "auto"
     }
 
     const spanStyle ={
@@ -41,18 +43,20 @@ function ImageSlider(){
     }
 
     return (
-        <div className="slide-container">
-            <Fade>
-                {slideImages.map((image, index) =>(
-                    <div key={index}>
-                        <div style={{...divStyle, backgroundImage:`url(${image.url})`}}>
-                            <span style={spanStyle}>{image.caption}</span>
+        <>
+            <div className="slide-container">
+                <Fade>
+                    {slideImages.map((image, index) =>(
+                        <div key={index}>
+                            <div style={{...divStyle, backgroundImage:`url(${image.url})`}}>
+                                <span style={spanStyle}>{image.caption}</span>
 
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Fade>
-        </div>
+                    ))}
+                </Fade>
+            </div>
+        </>
     )
 
 }

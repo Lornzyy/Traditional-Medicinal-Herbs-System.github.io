@@ -211,7 +211,8 @@ textarea:focus {
 
 .slide-container {
   border-radius: 20px;
-  height: 100%;
+  height: 70%;
+  margin-bottom: 50px;
 }
 
 .imgBtn {
@@ -229,7 +230,7 @@ textarea:focus {
   border-radius: 20px;
   border: 2px solid white;
   background: white;
-  margin: 10px;
+  margin-top: 4rem;
 
 }
 
@@ -324,7 +325,7 @@ textarea:focus {
   margin: 10px 0;
 }
 .footer--pin p {
-  margin:  20px 0;
+  margin:  25px 30px;
   text-decoration: none;
 }
 .footer--pin a  {
@@ -339,6 +340,7 @@ textarea:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 0 10px;
   cursor: pointer;
   margin: 20px 10px;
@@ -480,7 +482,7 @@ textarea:focus {
   }
 
   .startBtn {
-    margin-top: 25px;
+    margin-top: 5.3rem;
   }
   .homeBtn {
     visibility: visible;

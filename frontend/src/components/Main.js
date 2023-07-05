@@ -7,7 +7,6 @@ function Main(){
         try {
             const response = await fetch("http://localhost:5000/allHerbs");
             const jsonData = await response.json();
-
             setHerbs(jsonData)
         } catch (err) {
             console.error(err.message);

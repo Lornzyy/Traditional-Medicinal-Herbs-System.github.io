@@ -1,21 +1,11 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { UserAuth } from "../context/authContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header(){
     const navRef = useRef();
-    const {user, logOut} = UserAuth();
-
-    const handleLogOut=async() =>{
-        try {
-            await logOut();
-        } catch (err) {
-            console.log(err);
-        }
-    }
 
     const toggleBtn= () => {
         navRef.current.classList.toggle("responsive_nav");
@@ -42,10 +32,7 @@ export default function Header(){
                     </ul>
                     <Link to="/searchResults" onClick={toggleBtn}><button className="signupBtn">Search</button></Link>
                     
-                    {user?.displayName ? (
-                    <button className="signupBtn" onClick={handleLogOut}>LOG OUT</button> )
-                    : (<Link to="/login" onClick={toggleBtn}><button className="signupBtn">LOG IN </button></Link>)
-                    }
+                    
                     <FontAwesomeIcon
                         className="close-btn"
                         onClick={toggleBtn}
