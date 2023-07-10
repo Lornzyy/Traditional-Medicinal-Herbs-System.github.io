@@ -5,7 +5,7 @@ function Main(){
     const [herbs, setHerbs] = useState([]);
     const getHerbs = async() => {
         try {
-            const response = await fetch("http://localhost:5000/allHerbs");
+            const response = await fetch("http://localhost:5000/api/allHerbs");
             const jsonData = await response.json();
             setHerbs(jsonData)
         } catch (err) {
