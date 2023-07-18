@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { UserAuth } from "../context/authContext";
+import { Link } from "react-router-dom";
 
 function Main(){
 
@@ -21,7 +22,7 @@ function Main(){
         getHerbs();
     }, []);
 
-    const handleLogOut=async() =>{
+    const handleLogOut = async() =>{
         try {
             await logOut();
         } catch (err) {
@@ -32,7 +33,11 @@ function Main(){
 
     return (
         <>
-        <button className="signupBtn logOutBtn" onClick={handleLogOut}>LOG OUT</button>
+        <div className="logOut">
+        <Link to="/home">
+            <button className="signupBtn logOutBtn" onClick={handleLogOut}> LOG OUT </button>
+        </Link>
+        </div>
 
         <div className="main">
             {herbs.map(herb => (
