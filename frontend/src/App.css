@@ -213,6 +213,7 @@ textarea:focus {
   border-radius: 20px;
   height: 70%;
   margin-bottom: 50px;
+  transition: 2s;
 }
 
 .imgBtn {
@@ -230,7 +231,7 @@ textarea:focus {
   border-radius: 20px;
   border: 2px solid white;
   background: white;
-  margin-top: 4rem;
+  margin-top: 6%;
 
 }
 
@@ -255,47 +256,56 @@ textarea:focus {
 }
 
 .herb {
-  max-width: 16rem;
+  height: 26em;
+  max-width: 15.5rem;
   color: white;
-  padding: 10px;
-  margin: 10px 20px;
+  padding: 15px;
+  margin: 10px;
   border-radius: 20px;
   border: 2px solid #4e6498;
-  line-height: 1rem;
 }
 
 .herb--card {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
   width: 100%;
-}
-.herb:hover {
-  max-width: 20rem;
+  padding: 1px;
+  line-height: 1.2em;
 }
 
 .herb--img{
   height: 10.5rem;
-  width: 100%;
-  min-width: 14rem;
+  min-width: 13.5rem;
   border-radius: 20px;
   border: solid pink;
   cursor: pointer;
 }
 
-.herb--img:hover{
-  height: 12rem;
-  width: 300px;
+.herb--img:hover {
+  overflow: hidden;
+  transform: scale(1.1) ;
+  transition: 2s;
 }
 
 .herb--name {
+  padding: 5px 0;
   text-align: center;
-  font-size: 22px;
-  line-height: 2rem;
+  font-size: 20px;
 }
 
-.herb--description {
+.herb--part, .herb--description, .herb--instruction {
   max-width: 100%;
   text-align: justify;
+}
+
+.herb--part {
+  text-transform: capitalize;
+}
+
+
+.logOutBtn {
+  font-weight: 700;
+  box-shadow: 2px 5px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(70em);
 }
 
 /*sign in*/
@@ -357,8 +367,8 @@ textarea:focus {
 }
 
 .social-icon:hover {
-  box-shadow: inset 1em 2em #676262;
-  border-radius: 51%;
+  box-shadow: inset 1em 10em #676262;
+  border-radius: 50%;
 }
 
 .social-icon a {
@@ -482,10 +492,14 @@ textarea:focus {
   }
 
   .startBtn {
-    margin-top: 5.3rem;
+    margin-top: 5%;
   }
   .homeBtn {
     visibility: visible;
+  }
+
+  .logOutBtn {
+    transform: translateX(30em)
   }
 
 }

@@ -32,7 +32,7 @@ const Contact = () => {
         if (comment && username !== null){
             alert("Thank you for your comment")
         } else {
-            alert("Try again")
+            alert("Try again username or comment is invalid")
         }
     }
     return (

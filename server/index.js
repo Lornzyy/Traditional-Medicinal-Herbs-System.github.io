@@ -8,7 +8,7 @@ app.use(express.json());
 
 //list all herbs
 
-app.get("/api/allHerbs", async(req, res) => {
+app.get("/allHerbs", async(req, res) => {
     try {
        const allHerbs = await pool.query("SELECT * FROM medicinalherbs")
         res.json(allHerbs.rows);
@@ -19,7 +19,7 @@ app.get("/api/allHerbs", async(req, res) => {
 
 //search for specific herb or disease
 
-app.get("/api/herb", async(req, res) => {
+app.get("/herb", async(req, res) => {
     try {
         const { value } = req.query;
 
