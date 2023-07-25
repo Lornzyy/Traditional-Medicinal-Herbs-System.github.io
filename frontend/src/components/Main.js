@@ -34,7 +34,7 @@ function Main(){
     return (
         <>
         <div className="logOut">
-        <Link to="/home">
+        <Link to="/">
             <button className="signupBtn logOutBtn" onClick={handleLogOut}> LOG OUT </button>
         </Link>
         </div>
@@ -43,7 +43,7 @@ function Main(){
             {herbs.map(herb => (
                 <div className="herb" key={herb.id}>
                     <div className="herb--card">
-                        <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
+                        <img src={require(`../assets/images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
                         <h3 className="herb--name">{ herb.kikuyuname }</h3>
                         <p className="herb--part"><em>Part used: </em> {herb.part}</p>
                         <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>

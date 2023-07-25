@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { AuthContextProvider } from "./context/authContext"
+import { AuthContextProvider } from "./context/authContext";
 
-import "./App.css"
+import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/home";
 import Contact from "./pages/contact";

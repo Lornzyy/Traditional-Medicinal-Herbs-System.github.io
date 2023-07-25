@@ -14,7 +14,7 @@ export default function Header(){
     return (
             <div className="header">
                 <div className="header--intro">
-                <Link to="/"><img src={require("../images/logo.jpg")} className="logo" alt="App logo" /></Link>
+                <Link to="/"><img src={require("../assets/images/logo.jpg")} className="logo" alt="App logo" /></Link>
                 <h1 className="nav--header"><a href="/">Traditional Medicinal Herbs</a></h1>
                 </div>
                
@@ -31,8 +31,6 @@ export default function Header(){
                     <li className="additions--li"><Link to="/contact" onClick={toggleBtn}>Contact</Link></li>
                     </ul>
                     <Link to="/searchResults" onClick={toggleBtn}><button className="signupBtn">Search</button></Link>
-                    
-                    
                     <FontAwesomeIcon
                         className="close-btn"
                         onClick={toggleBtn}
