@@ -209,12 +209,14 @@ textarea:focus {
 
 }
 
-.slide-container {
+.slide--container {
   border-radius: 20px;
   height: 70%;
   margin-bottom: 50px;
-  transition: 2s;
+  transition: 1s;
 }
+
+
 
 .imgBtn {
   display: flex;
@@ -278,6 +280,7 @@ textarea:focus {
   border-radius: 20px;
   border: solid pink;
   cursor: pointer;
+  transition: 2ms;
 }
 
 .herb--img:hover {
@@ -479,6 +482,7 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   .social-icons {
@@ -502,5 +506,10 @@ textarea:focus {
 
   .homeBtn {
     visibility: visible;
+  }
+  .slide--container--div {
+    height: 220px;
+    max-width: 60%;
+  
   }
 }

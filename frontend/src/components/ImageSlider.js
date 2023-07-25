@@ -44,11 +44,11 @@ function ImageSlider(){
 
     return (
         <>
-            <div className="slide-container">
+            <div className="slide--container">
                 <Fade>
                     {slideImages.map((image, index) =>(
                         <div key={index}>
-                            <div style={{...divStyle, backgroundImage:`url(${image.url})`}}>
+                            <div className="slide--container--div" style={{...divStyle, backgroundImage:`url(${image.url})`}}>
                                 <span style={spanStyle}>{image.caption}</span>
 
                             </div>

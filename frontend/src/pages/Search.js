@@ -35,7 +35,7 @@ function Search(){
                         {returnHerb.map(herb => (
                                     <div className="herb" key={herb.id}>
                                         <div className="herb--card">
-                                            <img src={require(`../assets/images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
+                                            <img src={require(`../images/${herb.imageurl}.jpg`)} className="herb--img" alt="herbs"/>
                                             <h3 className="herb--name">{ herb.kikuyuname }</h3>
                                             <p className="herb--part"><em>Part used is the</em> {herb.part}</p>
                                             <p className="herb--description"><em>Preparation: </em>{herb.preparationmethod}</p>
