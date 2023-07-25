@@ -27,11 +27,12 @@ function ImageSlider(){
         alignItems: "center",
         justifyContent: "center",
         height: "380px",
-        maxWidth: "85%",
+        maxWidth: "90%",
         backgroundSize: "cover",
         borderRadius: "20px",
         backgroundPosition: "center",
-        margin: "auto"
+        margin: "auto",
+        transition: "1ms"
     }
 
     const spanStyle ={
@@ -48,7 +49,7 @@ function ImageSlider(){
                 <Fade>
                     {slideImages.map((image, index) =>(
                         <div key={index}>
-                            <div className="slide--container--div" style={{...divStyle, backgroundImage:`url(${image.url})`}}>
+                            <div style={{...divStyle, backgroundImage:`url(${image.url})`}}>
                                 <span style={spanStyle}>{image.caption}</span>
 
                             </div>

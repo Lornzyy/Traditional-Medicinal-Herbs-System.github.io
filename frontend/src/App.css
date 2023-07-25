@@ -211,7 +211,7 @@ textarea:focus {
 
 .slide--container {
   border-radius: 20px;
-  height: 70%;
+  object-fit: "fill";
   margin-bottom: 50px;
   transition: 1s;
 }
@@ -507,9 +507,5 @@ textarea:focus {
   .homeBtn {
     visibility: visible;
   }
-  .slide--container--div {
-    height: 220px;
-    max-width: 60%;
-  
-  }
+
 }
