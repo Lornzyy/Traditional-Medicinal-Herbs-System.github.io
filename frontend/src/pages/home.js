@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
 import Footer from "../components/Footer";
 
@@ -23,9 +24,8 @@ function Home(){
             </p>
             
             <ImageSlider/>
-            <div className="imgBtn">
-            <button className="startBtn"><a href="/login">GET STARTED</a></button>
-            </div>
+
+            <button className="startBtn imgBtn"><Link to="/medicine">GET STARTED</Link></button>
 
             <Footer/>
 

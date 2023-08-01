@@ -29,7 +29,7 @@ const Contact = () => {
     }
 
     function handleClick(){
-        if (comment && username !== null){
+        if (comment && username){
             alert("Thank you for your comment")
         } else {
             alert("Try again username or comment is invalid")
@@ -47,13 +47,15 @@ const Contact = () => {
                 <input type="text" 
                 placeholder="Enter your username" 
                 name="name" 
+                className="contact--form--input"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
                 />
                 <label htmlFor="comment"><strong>Comment:</strong></label>
                 <textarea type="text" 
                 placeholder="Enter your comment..." 
-                name="comment" 
+                name="comment"
+                className="contact--form--input"
                 value={comment}
                 onChange={e => setComment(e.target.value)}
                 />

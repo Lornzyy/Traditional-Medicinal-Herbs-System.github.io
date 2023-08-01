@@ -33,10 +33,15 @@ function Main(){
 
     return (
         <>
-        <div className="logOut">
-        <Link to="/">
-            <button className="signupBtn logOutBtn" onClick={handleLogOut}> LOG OUT </button>
-        </Link>
+        <div className="intro">
+            {
+                <h3 className="intro--text">Welcome, {user?.displayName}</h3>
+            }
+            <div className="logOut">
+            <Link to="/">
+                <button className="signupBtn logOutBtn" onClick={handleLogOut}> LOG OUT </button>
+            </Link>
+            </div>
         </div>
 
         <div className="main">

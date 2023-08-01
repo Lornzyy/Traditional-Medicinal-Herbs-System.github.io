@@ -6,6 +6,7 @@ function Medicine(){
 
     return (
         <>
+         
             <Main />
             <Footer />
         </>

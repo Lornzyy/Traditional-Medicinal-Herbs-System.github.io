@@ -26,7 +26,7 @@ function ImageSlider(){
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "380px",
+        height: "300px",
         maxWidth: "90%",
         backgroundSize: "cover",
         borderRadius: "20px",
@@ -39,7 +39,7 @@ function ImageSlider(){
         color: "white",
         fontSize: "40px",
         fontWeight: "600",
-        transform: "translate(0, 250%)",
+        transform: "translate(0, 100%)",
         textAlign: "center"
     }
 
