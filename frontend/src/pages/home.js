@@ -4,6 +4,7 @@ import ImageSlider from "../components/ImageSlider";
 import Footer from "../components/Footer";
 
 
+
 function Home(){
 
     return (
@@ -22,7 +23,19 @@ function Home(){
                 a first for them and ease their usage for them.
 
             </p>
-            
+            <div className="mb-5">
+                <h2 className="text-center m-2 text-white">If interested to read more click the button below</h2>
+                <a
+                    href={require('../file.pdf')}
+                    download="Traditional Medicinal Herbs, Kikuyu Community, Kiambu County"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-decoration:none"
+                    
+                >
+                    <button className="startBtn imgBtn signupBtn">Download pdf</button>
+                </a>
+            </div>
             <ImageSlider/>
             
 

@@ -243,6 +243,11 @@ textarea:focus {
   text-decoration: none;
 }
 
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 /** herb card */
 
 .main {
