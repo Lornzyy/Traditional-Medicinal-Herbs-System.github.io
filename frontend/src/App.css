@@ -211,9 +211,8 @@ textarea:focus {
 
 .slide--container {
   border-radius: 20px;
-  margin-bottom: 50px;
   transition: 1ms ease-in;
-  object-fit: contain;
+  margin-bottom: 2em;
 }
 
 .startBtn.imgBtn {
