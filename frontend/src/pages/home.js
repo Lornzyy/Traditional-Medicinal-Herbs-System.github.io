@@ -24,6 +24,7 @@ function Home(){
             </p>
             
             <ImageSlider/>
+            
 
             <button className="startBtn imgBtn"><Link to="/medicine">GET STARTED</Link></button>
 

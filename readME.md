@@ -15,14 +15,15 @@ The disease to be cured.
 
 [Click Here to visit the Traditional Medicinal Herbs System](https://traditional-medicinal-herbs-system-github-io.vercel.app/)
 
-![Snippet of the Traditional Medicinal Herbs System](./tmh-screenshot.png)
+## Snippet of the Traditional Medicinal Herbs System
+![tmh system image](./tmh-screenshot.png)
 
 
 ## Author
 
 You can find me on :
-[Twitter](https://twitter.com/Lornzyy)
-[Github](https://github.com/Lornzyy)
+### [Twitter](https://twitter.com/Lornzyy)
+### [Github](https://github.com/Lornzyy)
 
 
 ## Learn More
