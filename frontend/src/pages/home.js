@@ -30,7 +30,6 @@ function Home(){
                     download="Traditional Medicinal Herbs, Kikuyu Community, Kiambu County"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-decoration:none"
                     
                 >
                     <button className="startBtn imgBtn signupBtn">Download pdf</button>
