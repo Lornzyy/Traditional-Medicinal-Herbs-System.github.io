@@ -6,9 +6,10 @@ const pool = require("./db");
 app.use(cors());
 app.use(express.json());
 
+
 //list all herbs
 
-app.get("/allHerbs", async(req, res) => {
+app.use("/allHerbs", async(req, res) => {
     try {
        const allHerbs = await pool.query("SELECT * FROM medicinalherbs")
         res.json(allHerbs.rows);
